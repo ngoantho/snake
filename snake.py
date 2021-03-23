@@ -115,11 +115,11 @@ def main():
     food = Food()
     myfont = pygame.font.SysFont("monospace", 16)
 
-    running = True
-    while running:
+    while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
+                pygame.quit()
+                sys.exit()
         clock.tick(10)
         snake.handle_keys()
         drawGrid(surface)
